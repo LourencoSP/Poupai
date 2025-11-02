@@ -1,16 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.Poupai" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+    <!-- Tema escuro do Poupai -->
+    <style name="Theme.Poupai" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Cores principais -->
+        <item name="colorPrimary">@color/Primary_Blue</item>
+        <item name="colorPrimaryVariant">@color/Primary_Blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Cores secundárias -->
+        <item name="colorSecondary">@color/Color_gold</item>
+        <item name="colorSecondaryVariant">@color/Color_gold</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <!-- Fundo escuro -->
+        <item name="android:windowBackground">#0F172A</item> <!-- tom escuro azulado -->
+        <item name="android:statusBarColor">@color/Primary_Blue</item>
     </style>
 </resources>
