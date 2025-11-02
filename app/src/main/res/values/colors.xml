@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Verde_Receitas">#5DAC6C</color>
+    <color name="Vermelho_despesas">#D35858</color>
+    <color name="Primary_Blue">#2196F3</color>
+    <color name="Color_gold">#FFD700</color>
+    <color name="Primary_BG">#E9F5FE</color>
+    <color name="Atenção">#FB980F</color>
+
+
+</resources>
