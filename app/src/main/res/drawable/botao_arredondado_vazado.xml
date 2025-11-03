@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/Primary_Blue" />
+
+    <corners android:radius="50dp" />
+
+    <!-- Deixe transparente pra ficar "vazado" -->
+    <solid android:color="@android:color/transparent" />
+
+</shape>
