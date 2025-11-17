@@ -94,16 +94,18 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/facebook_icon"
         app:layout_constraintTop_toTopOf="@id/linha_direita"
+        app:layout_constraintStart_toStartOf="@id/linha_direita"
         tools:layout_editor_absoluteX="220dp" />
 
     <ImageView
-        android:id="@+id/facebook_icon.png"
+        android:id="@+id/GoogleIcon.png"
         android:layout_width="72dp"
         android:layout_height="72dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
         android:src="@drawable/google_icon"
-        app:layout_constraintTop_toTopOf="@id/linha_esquerda"
-        tools:layout_editor_absoluteX="120dp" />
+        app:layout_constraintEnd_toStartOf="@id/linha_direita"
+        app:layout_constraintTop_toTopOf="@id/linha_esquerda" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
