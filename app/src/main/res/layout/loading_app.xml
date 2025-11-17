@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Primary_Blue">
-    <!-- To be defined
-    tools:context="loading_app"> -->
+    tools:context="loading_app"
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
@@ -16,7 +15,7 @@
         android:scaleType="fitCenter"
         app:lottie_autoPlay="true"
         app:lottie_loop="false"
-        app:lottie_rawRes="@raw/Poupai_loading"
+        app:lottie_rawRes="@raw/poupai_loading"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
