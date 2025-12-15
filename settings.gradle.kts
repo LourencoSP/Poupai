@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Poupai"
 include(":app")
+include("backend")
