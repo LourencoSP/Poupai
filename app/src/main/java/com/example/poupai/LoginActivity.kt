@@ -32,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
                         val userId = response.body()?.id
+
                         Toast.makeText(this@LoginActivity, "Bem-vindo! ID: $userId", Toast.LENGTH_LONG).show()
 
                         // AQUI VOCÊ NAVEGA PARA A TELA PRINCIPAL (Home)
