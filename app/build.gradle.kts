@@ -6,13 +6,13 @@ plugins {
 android {
     namespace = "com.example.poupai"
     compileSdk {
-        version = release(36)
+        version = release(35)
     }
 
     defaultConfig {
         applicationId = "com.example.poupai"
         minSdk = 29
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -47,4 +47,5 @@ dependencies {
     implementation("com.airbnb.android:lottie:6.0.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

@@ -26,24 +26,41 @@ class LoginActivity : AppCompatActivity() {
             val email = editEmail.text.toString()
             val senha = editSenha.text.toString()
 
+            if (email.isEmpty() || senha.isEmpty()) {
+                Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val request = LoginRequest(email, senha)
 
             RetrofitClient.instance.login(request).enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
-                        val userId = response.body()?.id
+                        val loginResponse = response.body()
+                        val userId = loginResponse?.id ?: -1
 
-                        Toast.makeText(this@LoginActivity, "Bem-vindo! ID: $userId", Toast.LENGTH_LONG).show()
+                        if (userId != -1L) {
+                            Toast.makeText(this@LoginActivity, "Login realizado!", Toast.LENGTH_SHORT).show()
 
-                        // AQUI VOCÊ NAVEGA PARA A TELA PRINCIPAL (Home)
-                        // startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                            val intent = Intent(this@LoginActivity, HomeActivity::class.java)
+                            intent.putExtra("USER_ID", userId)
+
+
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+                            startActivity(intent)
+
+                        } else {
+                            Toast.makeText(this@LoginActivity, "Erro: ID do usuário inválido", Toast.LENGTH_SHORT).show()
+                        }
+
                     } else {
                         Toast.makeText(this@LoginActivity, "Email ou senha incorretos", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                    Toast.makeText(this@LoginActivity, "Erro de conexão. O servidor está rodando?", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@LoginActivity, "Falha na conexão: ${t.message}", Toast.LENGTH_LONG).show()
                 }
             })
         }
